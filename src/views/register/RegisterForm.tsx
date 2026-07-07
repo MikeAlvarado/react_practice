@@ -1,7 +1,7 @@
 import {useState} from 'react'
-import type { RegisterFormData } from '../types/form.types'
-import { CountrySelect } from './CountrySelect'
-import { useCountries } from '../hooks/useCountries'
+import type { RegisterFormData } from '../../types/form.types'
+import { CountrySelect } from '../../components/CountrySelect'
+import { useCountries } from '../../hooks/useCountries'
 import './RegisterForm.css'
 
 export const RegisterForm = () => {
