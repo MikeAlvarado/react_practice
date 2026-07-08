@@ -10,6 +10,11 @@ export const IndexView = () => {
       <div className="index-view__grid">
         {viewRegistry.map((view) => (
           <Link key={view.id} to={`/${view.id}`} className="index-card">
+            {view.status && (
+              <span className={`index-card__status index-card__status--${view.status.tone}`}>
+                {view.status.label}
+              </span>
+            )}
             {view.thumbnail && (
               <img className="index-card__thumbnail" src={view.thumbnail} alt="" />
             )}

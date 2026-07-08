@@ -10,10 +10,14 @@ interface ViewLayoutProps {
 export const ViewLayout = ({ title, children }: ViewLayoutProps) => {
   return (
     <div className="view-layout">
-      <header className="view-layout__header">
-        <Link to="/" className="view-layout__back">← Back to index</Link>
-        <span className="view-layout__title">{title}</span>
-      </header>
+      <nav className="view-layout__topbar">
+        <div className="view-layout__topbar-inner">
+          <Link to="/" className="view-layout__back">
+            <span aria-hidden="true">←</span> Back to index
+          </Link>
+          <span className="view-layout__title">{title}</span>
+        </div>
+      </nav>
       <div className="view-layout__content">
         {children}
       </div>

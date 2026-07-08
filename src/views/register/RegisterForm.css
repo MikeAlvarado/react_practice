@@ -1,3 +1,11 @@
+.register-view {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
 .register-card {
   width: 100%;
   max-width: 420px;
@@ -6,6 +14,26 @@
   border-radius: 16px;
   padding: 40px 36px;
   box-shadow: var(--shadow);
+}
+
+.register-view__note {
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.register-view__note a {
+  color: var(--accent);
+  font-weight: 550;
+  text-decoration: none;
+}
+
+.register-view__note a:hover {
+  text-decoration: underline;
 }
 
 @media (prefers-reduced-motion: no-preference) {
