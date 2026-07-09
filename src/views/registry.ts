@@ -2,14 +2,14 @@ import type { ComponentType } from 'react'
 import { RegisterForm } from './register/RegisterForm'
 
 export interface ViewStatus {
-  label: string
+  labelKey: string
   tone: 'warning' | 'info'
 }
 
 export interface ViewDefinition {
   id: string
-  title: string
-  description: string
+  titleKey: string
+  descriptionKey: string
   thumbnail?: string
   component: ComponentType
   status?: ViewStatus
@@ -18,11 +18,11 @@ export interface ViewDefinition {
 export const viewRegistry: ViewDefinition[] = [
   {
     id: 'register',
-    title: 'Register',
-    description: 'Account creation, sign-in, and password reset — with a live country lookup.',
+    titleKey: 'index.views.register.title',
+    descriptionKey: 'index.views.register.description',
     component: RegisterForm,
     status: {
-      label: 'API deprecated',
+      labelKey: 'index.views.register.status',
       tone: 'warning',
     },
   },

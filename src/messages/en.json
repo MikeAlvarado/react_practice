@@ -1,0 +1,59 @@
+{
+  "index": {
+    "title": "Component showcase",
+    "subtitle": "Pick a view to open it.",
+    "views": {
+      "register": {
+        "title": "Register",
+        "description": "One form for sign up, sign in, and password reset. The country field on sign up calls the REST Countries API directly from the browser — no backend involved.",
+        "status": "API deprecated"
+      }
+    }
+  },
+  "layout": {
+    "backToIndex": "Back to index"
+  },
+  "register": {
+    "modes": {
+      "register": {
+        "title": "Create your account",
+        "subtitle": "Fill in your details below to get started.",
+        "submit": "Create account"
+      },
+      "signin": {
+        "title": "Welcome back",
+        "subtitle": "Sign in with your email and password.",
+        "submit": "Sign in"
+      },
+      "forgot": {
+        "title": "Reset your password",
+        "subtitle": "Enter your email and we'll send you a reset link.",
+        "submit": "Send reset link"
+      }
+    },
+    "fields": {
+      "name": "Name",
+      "namePlaceholder": "Rose Prime",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "At least 8 characters",
+      "passwordHint": "Use 8 or more characters with a mix of letters and numbers."
+    },
+    "footer": {
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "forgotPassword": "Forgot password?",
+      "newHere": "New here?",
+      "createAccount": "Create an account",
+      "backToSignIn": "Back to sign in"
+    }
+  },
+  "common": {
+    "countrySelect": {
+      "label": "Country",
+      "placeholder": "Select a country",
+      "loading": "Loading countries..."
+    }
+  }
+}

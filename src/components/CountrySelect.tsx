@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import type { CountryTy } from '../types/countryTypes'
 
 interface CountrySelectProps {
@@ -8,11 +9,13 @@ interface CountrySelectProps {
 }
 
 export const CountrySelect = ({countries, value, onChange, loading} : CountrySelectProps) => {
+  const { t } = useTranslation()
+
   return (
     <div className="form-field">
-      <label htmlFor="country">Country</label>
+      <label htmlFor="country">{t('common.countrySelect.label')}</label>
       <select id="country" name="country" value={value} onChange={(e) => onChange(e.target.value)} disabled={loading}>
-        <option value="">{loading ? 'Loading countries...' : 'Select a country'}</option>
+        <option value="">{loading ? t('common.countrySelect.loading') : t('common.countrySelect.placeholder')}</option>
         {countries.map(country => (
           <option key={country.cca2} value={country.cca2}>{country.name.common}</option>
         ))}

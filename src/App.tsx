@@ -1,11 +1,16 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { ViewLayout } from './layouts/ViewLayout'
 import { IndexView } from './views/IndexView'
 import { viewRegistry } from './views/registry'
+import { LanguageSwitcher } from './components/LanguageSwitcher'
 
 function App() {
+  const { t } = useTranslation()
+
   return (
     <BrowserRouter>
+      <LanguageSwitcher />
       <Routes>
         <Route path="/" element={<IndexView />} />
         {viewRegistry.map((view) => (
@@ -13,7 +18,7 @@ function App() {
             key={view.id}
             path={`/${view.id}`}
             element={
-              <ViewLayout title={view.title}>
+              <ViewLayout title={t(view.titleKey)}>
                 <view.component />
               </ViewLayout>
             }

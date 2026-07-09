@@ -1,0 +1,59 @@
+{
+  "index": {
+    "title": "Catálogo de componentes",
+    "subtitle": "Elige una vista para abrirla.",
+    "views": {
+      "register": {
+        "title": "Registro",
+        "description": "Un solo formulario para registro, inicio de sesión y recuperación de contraseña. El campo de país al registrarte llama a la API de REST Countries directamente desde el navegador — sin backend.",
+        "status": "API deprecada"
+      }
+    }
+  },
+  "layout": {
+    "backToIndex": "Volver al índice"
+  },
+  "register": {
+    "modes": {
+      "register": {
+        "title": "Crea tu cuenta",
+        "subtitle": "Completa tus datos para empezar.",
+        "submit": "Crear cuenta"
+      },
+      "signin": {
+        "title": "Bienvenido de nuevo",
+        "subtitle": "Inicia sesión con tu correo y contraseña.",
+        "submit": "Iniciar sesión"
+      },
+      "forgot": {
+        "title": "Restablece tu contraseña",
+        "subtitle": "Ingresa tu correo y te enviaremos un enlace para restablecerla.",
+        "submit": "Enviar enlace"
+      }
+    },
+    "fields": {
+      "name": "Nombre",
+      "namePlaceholder": "Rose Prime",
+      "email": "Correo",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Al menos 8 caracteres",
+      "passwordHint": "Usa 8 caracteres o más, combinando letras y números."
+    },
+    "footer": {
+      "haveAccount": "¿Ya tienes una cuenta?",
+      "signIn": "Inicia sesión",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "newHere": "¿Eres nuevo?",
+      "createAccount": "Crea una cuenta",
+      "backToSignIn": "Volver a iniciar sesión"
+    }
+  },
+  "common": {
+    "countrySelect": {
+      "label": "País",
+      "placeholder": "Selecciona un país",
+      "loading": "Cargando países..."
+    }
+  }
+}
