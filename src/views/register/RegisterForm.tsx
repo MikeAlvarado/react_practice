@@ -1,8 +1,8 @@
 import {useState} from 'react'
 import { useTranslation } from 'react-i18next'
-import type { RegisterFormData } from '../../types/form.types'
-import { CountrySelect } from '../../components/CountrySelect'
-import { useCountries } from '../../hooks/useCountries'
+import type { RegisterFormData } from './types/form.types'
+import { CountrySelect } from './components/CountrySelect'
+import { useCountries } from './hooks/useCountries'
 import './RegisterForm.css'
 
 type FormMode = 'register' | 'signin' | 'forgot'

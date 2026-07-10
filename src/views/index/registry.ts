@@ -1,5 +1,5 @@
 import type { ComponentType } from 'react'
-import { RegisterForm } from './register/RegisterForm'
+import { RegisterForm } from '../register/RegisterForm'
 
 export interface ViewStatus {
   labelKey: string

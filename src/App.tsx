@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ViewLayout } from './layouts/ViewLayout'
-import { IndexView } from './views/IndexView'
-import { viewRegistry } from './views/registry'
+import { IndexView } from './views/index/IndexView'
+import { viewRegistry } from './views/index/registry'
 import { LanguageSwitcher } from './components/LanguageSwitcher'
 
 function App() {
