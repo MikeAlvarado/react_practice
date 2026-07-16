@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react'
 import { RegisterForm } from '../register/RegisterForm'
+import { MinesweeperView } from '../minesweeper/MinesweeperView'
 
 export interface ViewStatus {
   labelKey: string
@@ -25,5 +26,11 @@ export const viewRegistry: ViewDefinition[] = [
       labelKey: 'index.views.register.status',
       tone: 'warning',
     },
+  },
+  {
+    id: 'minesweeper',
+    titleKey: 'index.views.minesweeper.title',
+    descriptionKey: 'index.views.minesweeper.description',
+    component: MinesweeperView,
   },
 ]
