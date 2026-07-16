@@ -10,7 +10,7 @@
       },
       "minesweeper": {
         "title": "Minesweeper",
-        "description": "Classic minesweeper board logic, no styling yet."
+        "description": "Classic minesweeper. Pick a difficulty preset or build a custom square board, then clear it without hitting a mine."
       }
     }
   },
@@ -61,11 +61,27 @@
     }
   },
   "minesweeper": {
+    "setup": {
+      "title": "Choose a board",
+      "subtitle": "Pick a difficulty preset or build your own square grid.",
+      "mines": "mines",
+      "customMeta": "Pick your own size",
+      "customSize": "Board size",
+      "customHint": "Between {{min}} and {{max}} cells per side. The board is always square.",
+      "start": "Start game"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "expert": "Expert",
+      "custom": "Custom"
+    },
+    "flagsLeft": "Flags left: {{count}}",
     "status": {
-      "playing": "Mines: {{count}}",
       "win": "You win!",
       "lose": "You lose!"
     },
-    "reset": "Restart"
+    "reset": "Restart",
+    "changeLevel": "Change level"
   }
 }

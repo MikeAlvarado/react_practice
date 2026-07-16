@@ -126,3 +126,9 @@ export function revealSlot(board: Board, row: number, col: number): RevealResult
 
   return 'CONTINUE'
 }
+
+export function revealAllMines(board: Board): void {
+  board.forEach(row => row.forEach(cell => {
+    if (cell.isMine) cell.revealed = true
+  }))
+}

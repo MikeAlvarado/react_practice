@@ -10,7 +10,7 @@
       },
       "minesweeper": {
         "title": "Buscaminas",
-        "description": "Lógica del tablero de buscaminas, todavía sin estilos."
+        "description": "Buscaminas clásico. Elige un nivel con presets o arma un tablero cuadrado personalizado, y despéjalo sin pisar una mina."
       }
     }
   },
@@ -61,11 +61,27 @@
     }
   },
   "minesweeper": {
+    "setup": {
+      "title": "Elige un tablero",
+      "subtitle": "Selecciona un nivel con presets o arma tu propia cuadrícula cuadrada.",
+      "mines": "minas",
+      "customMeta": "Elige tu propio tamaño",
+      "customSize": "Tamaño del tablero",
+      "customHint": "Entre {{min}} y {{max}} celdas por lado. El tablero siempre es cuadrado.",
+      "start": "Empezar juego"
+    },
+    "levels": {
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "expert": "Experto",
+      "custom": "Personalizado"
+    },
+    "flagsLeft": "Banderas restantes: {{count}}",
     "status": {
-      "playing": "Minas: {{count}}",
       "win": "¡Ganaste!",
       "lose": "¡Perdiste!"
     },
-    "reset": "Reiniciar"
+    "reset": "Reiniciar",
+    "changeLevel": "Cambiar nivel"
   }
 }

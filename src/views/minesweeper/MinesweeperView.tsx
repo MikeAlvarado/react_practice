@@ -1,33 +1,30 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useMinesweeper } from './hooks/useMinesweeper'
-import { BoardCell } from './components/BoardCell'
-
-const ROWS = 9
-const COLS = 9
-const MINE_COUNT = 10
+import { LevelSelect } from './components/LevelSelect'
+import { GameBoard } from './components/GameBoard'
+import type { BoardConfig } from './types/board.types'
+import './MinesweeperView.css'
 
 export const MinesweeperView = () => {
   const { t } = useTranslation()
-  const { board, status, reveal, toggleFlag, reset } = useMinesweeper(ROWS, COLS, MINE_COUNT)
+  const [config, setConfig] = useState<BoardConfig | null>(null)
+
+  if (!config) {
+    return (
+      <div className="ms-card">
+        <div className="ms-card__mark" aria-hidden="true">💣</div>
+        <h2 className="ms-card__title">{t('minesweeper.setup.title')}</h2>
+        <p className="ms-card__subtitle">{t('minesweeper.setup.subtitle')}</p>
+        <LevelSelect onStart={setConfig} />
+      </div>
+    )
+  }
 
   return (
-    <div>
-      <p>{t(`minesweeper.status.${status.toLowerCase()}`, { count: MINE_COUNT })}</p>
-      <button type="button" onClick={reset}>{t('minesweeper.reset')}</button>
-      <div>
-        {board.map((row, rowIndex) => (
-          <div key={rowIndex} style={{ display: 'flex' }}>
-            {row.map((cell, colIndex) => (
-              <BoardCell
-                key={colIndex}
-                cell={cell}
-                onReveal={() => reveal(rowIndex, colIndex)}
-                onFlag={() => toggleFlag(rowIndex, colIndex)}
-              />
-            ))}
-          </div>
-        ))}
-      </div>
-    </div>
+    <GameBoard
+      key={`${config.rows}x${config.cols}x${config.mines}`}
+      config={config}
+      onChangeLevel={() => setConfig(null)}
+    />
   )
 }
