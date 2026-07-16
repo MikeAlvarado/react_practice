@@ -11,6 +11,11 @@
       "minesweeper": {
         "title": "Minesweeper",
         "description": "Classic minesweeper. Pick a difficulty preset or build a custom square board, then clear it without hitting a mine."
+      },
+      "snake": {
+        "title": "Snake",
+        "description": "The snake moves on its own on a 10×10 grid. Use WASD or the arrow keys to steer it without hitting a wall or itself.",
+        "status": "Beta"
       }
     }
   },
@@ -83,5 +88,12 @@
     },
     "reset": "Restart",
     "changeLevel": "Change level"
+  },
+  "snake": {
+    "hint": "Use W A S D or the arrow keys to steer",
+    "status": {
+      "lose": "You hit a wall or yourself!"
+    },
+    "reset": "Restart"
   }
 }

@@ -68,10 +68,20 @@
   background: var(--accent-soft);
 }
 
+.index-card__status--beta {
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.14);
+}
+
 @media (prefers-color-scheme: dark) {
   .index-card__status--warning {
     color: #fbbf24;
     background: rgba(217, 119, 6, 0.2);
+  }
+
+  .index-card__status--beta {
+    color: #a78bfa;
+    background: rgba(124, 58, 237, 0.2);
   }
 }
 
@@ -81,10 +91,23 @@
   margin-bottom: 8px;
 }
 
+.index-card__title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
 .index-card__title {
   margin: 0;
   font-size: 17px;
   font-weight: 600;
+}
+
+.index-card__version {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
 }
 
 .index-card__description {

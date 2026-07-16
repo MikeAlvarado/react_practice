@@ -21,7 +21,10 @@ export const IndexView = () => {
             {view.thumbnail && (
               <img className="index-card__thumbnail" src={view.thumbnail} alt="" />
             )}
-            <h2 className="index-card__title">{t(view.titleKey)}</h2>
+            <div className="index-card__title-row">
+              <h2 className="index-card__title">{t(view.titleKey)}</h2>
+              <span className="index-card__version">{view.version}</span>
+            </div>
             <p className="index-card__description">{t(view.descriptionKey)}</p>
           </Link>
         ))}

@@ -11,6 +11,11 @@
       "minesweeper": {
         "title": "Buscaminas",
         "description": "Buscaminas clásico. Elige un nivel con presets o arma un tablero cuadrado personalizado, y despéjalo sin pisar una mina."
+      },
+      "snake": {
+        "title": "Snake",
+        "description": "La serpiente se mueve sola en un grid de 10×10. Usa WASD o las flechas para dirigirla sin chocar contra una pared o contra sí misma.",
+        "status": "Beta"
       }
     }
   },
@@ -83,5 +88,12 @@
     },
     "reset": "Reiniciar",
     "changeLevel": "Cambiar nivel"
+  },
+  "snake": {
+    "hint": "Usa W A S D o las flechas para moverte",
+    "status": {
+      "lose": "¡Chocaste contra una pared o contra ti mismo!"
+    },
+    "reset": "Reiniciar"
   }
 }

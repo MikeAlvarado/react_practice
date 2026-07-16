@@ -1,0 +1,135 @@
+.snake-game {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .snake-game {
+    animation: snake-game-enter 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes snake-game-enter {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .snake-game {
+    padding: 16px;
+  }
+}
+
+.snake-game__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.snake-game__hint {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.snake-game__result {
+  min-width: 96px;
+  font-size: 14px;
+  font-weight: 650;
+  text-align: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  visibility: hidden;
+}
+
+.snake-game__result--lose {
+  visibility: visible;
+  background: rgba(220, 38, 38, 0.14);
+  color: #dc2626;
+}
+
+.snake-game__footer {
+  display: flex;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.snake-game__btn {
+  flex: 1;
+  height: 44px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.snake-game__btn:hover {
+  background: var(--accent-hover);
+}
+
+.snake-game__btn:active {
+  transform: scale(0.97);
+}
+
+.snake-board-wrap {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.snake-board {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin: 0 auto;
+  gap: 2px;
+  background: var(--border);
+  padding: 2px;
+  border-radius: 8px;
+}
+
+.snake-board__row {
+  display: flex;
+  gap: 2px;
+}
+
+.snake-cell {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: var(--bg);
+}
+
+@media (max-width: 480px) {
+  .snake-cell {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.snake-cell--body {
+  background: var(--accent-soft);
+}
+
+.snake-cell--head {
+  background: var(--accent);
+}
